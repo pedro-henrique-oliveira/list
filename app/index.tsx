@@ -23,16 +23,15 @@ export default function HomePage() {
           <Text style={s.title}>Corinthians</Text>
           <Text style={s.paragraph}>1910</Text>
         </View>
+        <View style={s.body2}>
+          <Image source={require("@/assets/images/logo3.png")} />
+        </View>
         <View style={s.logo}>
           <TouchableOpacity style={s.btn} onPress={visit}>
-            <Text style={s.btnText}>
-              <Image source={require("@/assets/images/logo3.png")} />
-            </Text>
+            <Text style={s.btnText}>Loja de camisas</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={s.btn} onPress={visit2}>
-            <Text style={s.btnText}>
-              <Image source={require("@/assets/images/logo3.png")} />
-            </Text>
+          <TouchableOpacity style={s.btn2} onPress={visit2}>
+            <Text style={s.btnText2}>Loja de chuteiras</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
@@ -47,6 +46,10 @@ const s = StyleSheet.create({
   body: {
     backgroundColor: "#000000",
     gap: 20,
+  },
+  body2: {
+    alignItems: "center",
+    justifyContent: "center",
   },
   title: {
     color: "#ffffff",
@@ -65,11 +68,43 @@ const s = StyleSheet.create({
     justifyContent: "center",
   },
   btn: {
+    shadowColor: "#000000",
+    shadowOffset: {
+      width: 0,
+      height: 9,
+    },
+    shadowOpacity: 0.5,
+    shadowRadius: 12.35,
+    elevation: 19,
+    backgroundColor: "#206470",
+    width: 200,
+    height: 60,
     alignItems: "center",
     justifyContent: "center",
+    borderWidth: 2,
+    borderColor: "#090909",
+    borderRadius: 999,
+  },
+  btn2: {
+    shadowColor: "#000000",
+    shadowOffset: {
+      width: 0,
+      height: 9,
+    },
+    shadowOpacity: 0.5,
+    shadowRadius: 12.35,
+    elevation: 19,
+    backgroundColor: "#206470",
+    width: 200,
+    height: 60,
+    alignItems: "center",
+    justifyContent: "center",
+    borderWidth: 2,
+    borderColor: "#090909",
+    borderRadius: 999,
   },
   btnText: {
-    color: "#ffffff",
     fontSize: 15,
   },
+  btnText2: {},
 });
